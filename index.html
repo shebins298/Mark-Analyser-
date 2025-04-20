@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Mark Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Mark Analysis</h1>
+    <input type="file" id="excelFile" accept=".xlsx, .xls" />
+    <button class="analyze-btn" onclick="analyzeMarks()">Analyze</button>
+
+    <section id="summary" class="card"></section>
+    <section class="card"><canvas id="subjectChart"></canvas></section>
+    <section id="rankList" class="card"></section>
+    <section id="fullAPlus" class="card"></section>
+    <section id="failList" class="card"></section>
+    <section id="improvement" class="card"></section>
+
+    <button class="export-btn" onclick="exportPDF()">Export PDF</button>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
